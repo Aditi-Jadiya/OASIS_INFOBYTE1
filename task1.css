@@ -1,0 +1,316 @@
+/* Global Reset and Typography */
+:root {
+    --primary-color: #008000; /* A vibrant green similar to the example */
+    --secondary-color: #4CAF50;
+    --text-color: #333;
+    --light-text-color: #555;
+    --background-color: #f9f9f9;
+    --white: #ffffff;
+    --border-radius: 8px;
+    --padding-base: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--padding-base);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* --- Navigation/Header Styling --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--padding-base);
+    padding-bottom: var(--padding-base);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+/* --- Hero Section Styling --- */
+.hero-section {
+    background-color: var(--background-color); /* Light background for the top */
+    text-align: center;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden; /* To contain the graphic placeholder */
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    color: var(--text-color);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    color: var(--light-text-color);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.hero-graphic {
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+}
+
+/* Stylized placeholder for the Hero image/graphic */
+.graphic-placeholder {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(180deg, #f0f0f0 0%, #ffe9e9 40%, #ffc0c0 60%, #ff8080 80%, #ff5555 100%);
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+/* --- Feature Sections Styling --- */
+.features-grid {
+    padding: 60px 0;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.feature-item h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: var(--text-color);
+}
+
+.feature-item p {
+    margin-bottom: 1em;
+    color: var(--light-text-color);
+}
+
+.feature-link {
+    font-weight: 600;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.feature-link:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Placeholder for images */
+.feature-image {
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    background-color: #e0e0e0;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: var(--light-text-color);
+}
+
+/* Desktop layout for features */
+@media (min-width: 768px) {
+    .feature-item {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .feature-item.reverse {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+
+    .feature-text, .feature-image {
+        flex: 1;
+    }
+
+    .feature-text {
+        max-width: 50%;
+    }
+
+    .feature-item.reverse .feature-text {
+        padding-left: 50px; /* Space for reverse layout */
+    }
+
+    .feature-item:not(.reverse) .feature-text {
+        padding-right: 50px; /* Space for standard layout */
+    }
+}
+
+/* --- Icon Summary Section Styling --- */
+.icon-summary {
+    padding: 40px 0 80px;
+}
+
+.icon-summary .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.summary-card {
+    flex: 1 1 250px; /* Allows cards to wrap and fill space */
+    padding: 20px;
+}
+
+.icon-placeholder {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+}
+
+/* Icon colors based on the ExpressVPN example */
+.bg-yellow { background-color: #ffe082; }
+.bg-green { background-color: #a5d6a7; }
+.bg-orange { background-color: #ffab91; }
+
+.summary-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+/* --- Global Reach Section Styling --- */
+.global-reach {
+    background-color: #fdeaea; /* Light pink background similar to the example */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.global-reach h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.reach-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.reach-map {
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    background-color: #f8caca; /* Placeholder for map graphic */
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: var(--light-text-color);
+}
+
+.reach-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 300px; /* Keeps stats in a neat column/group */
+}
+
+.stat-item {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.stat-number {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 1em;
+    color: var(--light-text-color);
+}
+
+.global-reach .footer-link {
+    display: block;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: var(--light-text-color);
+    text-decoration: underline;
+}
+
+/* Desktop layout for Global Reach */
+@media (min-width: 992px) {
+    .reach-content {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .reach-stats {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        max-width: none;
+    }
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #bbb;
+    font-size: 0.8em;
+}
