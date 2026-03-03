@@ -95,7 +95,6 @@ a {
     width: 100%;
 }
 
-/* Stylized placeholder for the Hero image/graphic */
 .graphic-placeholder {
     width: 100%;
     height: 250px;
@@ -104,7 +103,6 @@ a {
     border-bottom: 5px solid var(--primary-color);
 }
 
-/* --- Feature Sections Styling --- */
 .features-grid {
     padding: 60px 0;
 }
@@ -143,7 +141,6 @@ a {
     color: var(--white);
 }
 
-/* Placeholder for images */
 .feature-image {
     width: 100%;
     max-width: 300px;
@@ -157,7 +154,6 @@ a {
     color: var(--light-text-color);
 }
 
-/* Desktop layout for features */
 @media (min-width: 768px) {
     .feature-item {
         flex-direction: row;
@@ -187,7 +183,6 @@ a {
     }
 }
 
-/* --- Icon Summary Section Styling --- */
 .icon-summary {
     padding: 40px 0 80px;
 }
@@ -201,7 +196,7 @@ a {
 }
 
 .summary-card {
-    flex: 1 1 250px; /* Allows cards to wrap and fill space */
+    flex: 1 1 250px; 
     padding: 20px;
 }
 
@@ -212,7 +207,6 @@ a {
     border-radius: 50%;
 }
 
-/* Icon colors based on the ExpressVPN example */
 .bg-yellow { background-color: #ffe082; }
 .bg-green { background-color: #a5d6a7; }
 .bg-orange { background-color: #ffab91; }
@@ -313,4 +307,5 @@ footer {
     background-color: #333;
     color: #bbb;
     font-size: 0.8em;
+
 }
